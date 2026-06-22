@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="loans.xsl"?>
+<emprestimos>
+    <emprestimo>
+        <leitor>
+            <nome>Ana Silva</nome>
+            <numeroEstudante>1234567</numeroEstudante>
+        </leitor>
+        <livro>
+            <titulo>Integração de Sistemas</titulo>
+            <autor>Autor Teste</autor>
+            <isbn>9789727229051</isbn>
+        </livro>
+        <tipoEmprestimo>normal</tipoEmprestimo>
+        <dataLevantamento>2026-06-15</dataLevantamento>
+        <dataPrevistaDevolucao>2026-06-30</dataPrevistaDevolucao>
+    </emprestimo>
+    <emprestimo>
+        <leitor>
+            <nome>Bruno Costa</nome>
+            <numeroEstudante>7654321</numeroEstudante>
+        </leitor>
+        <livro>
+            <titulo>Web Services na Prática</titulo>
+            <autor>Maria Reis</autor>
+            <isbn>9789890000002</isbn>
+        </livro>
+        <tipoEmprestimo>curta duração</tipoEmprestimo>
+        <dataLevantamento>2026-06-20</dataLevantamento>
+        <dataPrevistaDevolucao>2026-06-25</dataPrevistaDevolucao>
+    </emprestimo>
+</emprestimos>

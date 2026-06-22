@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/readers"
+           xmlns="http://example.com/readers"
+           elementFormDefault="qualified">
+
+    <!-- TODO 1: criar tipo simples para ISBN com exatamente 13 dígitos -->
+    <xs:simpleType name="isbnCodigo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{13}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- TODO 2: criar getReaderRequest com o campo isbn -->
+
+    <xs:element name="getReaderRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="isbn" type="isbnCodigo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- TODO 3: criar getReaderResponse com os campos pedidos no enunciado -->
+    <xs:element name="getReaderResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomeLeitor" type="xs:string"/>
+                <xs:element name="numeroEstudante" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="tituloLivro" type="xs:string"/>
+                <xs:element name="autor" type="xs:string"/>
+                <xs:element name="editora" type="xs:string"/>
+                <xs:element name="anoPublicacao" type="xs:int"/>
+                <xs:element name="isbn" type="isbnCodigo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,7 @@
+ti\soap\schema\package-info.class
+ti\soap\endpoint\TemplateEndpoint.class
+ti\soap\schema\ObjectFactory.class
+ti\soap\schema\GetEncomendaRequest.class
+ti\soap\schema\GetEncomendaResponse.class
+ti\soap\config\WebServiceConfig.class
+ti\soap\TemplateSoapApplication.class

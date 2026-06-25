@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/service"
+           xmlns="http://example.com/service"
+           elementFormDefault="qualified">
+
+
+    <xs:simpleType name="numeroApoliceTipo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="getApoliceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numeroApolice" type="numeroApoliceTipo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getApoliceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomeCliente" type="xs:string"/>
+                <xs:element name="nif" type="xs:string"/>
+                <xs:element name="matricula" type="xs:string"/>
+                <xs:element name="modelo" type="xs:string"/>
+                <xs:element name="marca" type="xs:string"/>
+                <xs:element name="tipoSeguro" type="xs:string"/>
+                <xs:element name="estado" type="xs:string"/>
+                <xs:element name="numeroApolice" type="numeroApoliceTipo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

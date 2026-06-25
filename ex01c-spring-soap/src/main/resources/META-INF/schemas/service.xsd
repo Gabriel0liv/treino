@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/service"
+           xmlns="http://example.com/service"
+           elementFormDefault="qualified">
+
+
+
+    <xs:simpleType name="numeroUtenteTipo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="getConsultaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numeroUtente" type="numeroUtenteTipo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getConsultaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomePaciente" type="xs:string"/>
+                <xs:element name="medico" type="xs:string"/>
+                <xs:element name="especialidade" type="xs:string"/>
+                <xs:element name="dataConsulta" type="xs:string"/>
+                <xs:element name="horaConsulta" type="xs:string"/>
+                <xs:element name="estado" type="xs:string"/>
+                <xs:element name="sala" type="xs:string"/>
+                <xs:element name="numeroUtente" type="numeroUtenteTipo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

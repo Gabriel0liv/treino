@@ -4,18 +4,31 @@
            xmlns="http://example.com/service"
            elementFormDefault="qualified">
 
-    <xs:element name="sampleRequest">
+
+    <xs:simpleType name="numeroCartaoTipo">
+        <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{8}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="getMembroRequest" >
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="id" type="xs:int"/>
+                <xs:element name="numeroCartao" type="numeroCartaoTipo"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="sampleResponse">
+    <xs:element name="getMembroResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="message" type="xs:string"/>
+                <xs:element name="nomeSocio" type="xs:string"/>
+                <xs:element name="nif" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="plano" type="xs:string"/>
+                <xs:element name="dataInicio" type="xs:string"/>
+                <xs:element name="estado" type="xs:string"/>
+                <xs:element name="numeroCartao" type="numeroCartaoTipo"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

@@ -1,0 +1,7 @@
+ti\soap\schema\package-info.class
+ti\soap\endpoint\TemplateEndpoint.class
+ti\soap\schema\ObjectFactory.class
+ti\soap\schema\GetConsultaResponse.class
+ti\soap\config\WebServiceConfig.class
+ti\soap\schema\GetConsultaRequest.class
+ti\soap\TemplateSoapApplication.class

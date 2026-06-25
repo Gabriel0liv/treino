@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/service"
+           xmlns="http://example.com/service"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="numeroMicroshipTipo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{15}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="getTutorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numeroMicroship" type="numeroMicroshipTipo" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getTutorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nomeTutor" type="xs:string"/>
+                <xs:element name="telefone" type="xs:string"/>
+                <xs:element name="nif" type="xs:string"/>
+                <xs:element name="nomeAnimal" type="xs:string"/>
+                <xs:element name="especie" type="xs:string"/>
+                <xs:element name="raca" type="xs:string"/>
+                <xs:element name="NascimentoAnimal" type="xs:string"/>
+                <xs:element name="numeroMicroship" type="numeroMicroshipTipo" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
